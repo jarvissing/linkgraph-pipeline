@@ -1,0 +1,28 @@
+
+
+{
+  "name": "linkgraph-pipeline",
+  "version": "1.0.0",
+  "description": "Automated content publishing pipeline using Node.js and Playwright",
+  "main":"publish.js",
+  "type": "module",
+  "scripts": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jarvissing/linkgraph-pipeline.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jarvissing/linkgraph-pipeline/issues"
+  },
+  "homepage": "https://github.com/jarvissing/linkgraph-pipeline#readme",
+  "dependencies": {
+    "marked": "^18.0.6"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.61.1",
+    "@types/node": "^26.1.1"
+  }
+}
