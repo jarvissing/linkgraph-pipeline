@@ -26,6 +26,6 @@ The pipeline executes a strict, error-resistant sequence:
 *    Solved by implementing `GitHub Actions upload-artifact` to persist deployment screenshots for remote verification.
     
      **Proof of Execution Guide for Local Execution**
-1. Clone the repository: git clone 
+1. Clone the repository: git clone (https://github.com/jarvissing/linkgraph-pipeline )
 2. Install dependencies: npm install
 3. Run the pipeline: node publish.js
