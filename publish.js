@@ -29,7 +29,7 @@ async function processContent() {
         console.log('4. Firing up the browser...');
         // We set headless: false so you can physically watch the automation happen
         // slowMo slows down the actions by 500ms so it doesn't happen too fast to see
-        const browser = await chromium.launch({ headless: false, slowMo: 500 });
+        const browser = await chromium.launch({ headless: true });
         const context = await browser.newContext();
         const page = await context.newPage();
 
