@@ -30,7 +30,7 @@ async function processContent() {
 
         console.log('✅ Content Injected Successfully.');
   // 3. NEW: Click the "File" menu to simulate publishing
-        await page.getByRole('button', { name: 'File' }).click();
+        await page.locator('text=File').first().click();
         console.log('🚀 "Publish/Save" action triggered.');
   // 4. Take a final screenshot of the menu being open
         await page.screenshot({ path: 'final-proof.png' });
