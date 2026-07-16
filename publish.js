@@ -21,10 +21,7 @@ async function processContent() {
         const page = await browser.newPage();
 
         // 1. Navigate to the mock CMS
-        // ... existing code ...
-        // 1. Navigate to the mock CMS
         await page.goto('https://the-internet.herokuapp.com/tinymce');
-        
         // 2. Use evaluate to force the HTML into the editor body directly
         const frame = page.frameLocator('#mce_0_ifr');
         await frame.locator('#tinymce').evaluate((element, content) => {
@@ -32,14 +29,13 @@ async function processContent() {
         }, htmlContent);
 
         console.log('✅ Content Injected Successfully.');
-// ... existing code ...
-
-        // 3. Take a screenshot to prove the HTML was injected
+  // 3. NEW: Click the "File" menu to simulate publishing
+        await page.getByRole('button', { name: 'File' }).click();
+        console.log('🚀 "Publish/Save" action triggered.');
+  // 4. Take a final screenshot of the menu being open
         await page.screenshot({ path: 'final-proof.png' });
-
         await browser.close();
         console.log('--- PIPELINE FINISHED ---');
-
     } catch (error) {
         console.error('\n❌ PIPELINE HALTED:', error.message);
     }
